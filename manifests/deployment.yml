@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: Envtestapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: Envtestapp 
+    spec:
+      containers:
+        - name: Envtestapp 
+          image: desattiracr.azurecr.io/Envtestapp 
+          ports:
+          - containerPort: 80
